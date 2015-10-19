@@ -1,0 +1,25 @@
+{
+  "name": "d3reactpract",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./src/app.js",
+  "scripts": {
+    "start": "watchify -o public/bundle.js -v src/*",
+    "build": "browserify . -t [babelify] > public/bundle.js"
+  },
+  "browserify": {
+    "transform": "babelify"
+  },
+  "author": "Aaron Norby",
+  "license": "ISC",
+  "dependencies": {
+    "d3": "^3.5.6",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0"
+  },
+  "devDependencies": {
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0",
+    "watchify": "^3.4.0"
+  }
+}

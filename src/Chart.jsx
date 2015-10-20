@@ -42,10 +42,11 @@ var Chart = React.createClass({
 
 
   render: function() {
+    var svgStyle = {border: "2px solid black"}
     return (
       <div>
         <div><h1>!!!</h1></div>
-        <svg 
+        <svg style={svgStyle}
           width={this.state.width}
           height={this.state.height}>
             <g>

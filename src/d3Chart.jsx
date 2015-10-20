@@ -12,8 +12,8 @@ simpleChart.create = function(el, state) {
     .data(state.data)
     .enter()
     .append('svg:circle')
-    .attr('cx', function(d, i) {return i*20;})
-    .attr('cy', function(d, i) {return i*20;})
+    .attr('cx', function(d, i) {return i*20 + 20;})
+    .attr('cy', function(d, i) {return i*20 + 20;})
     .attr('r', 9)
     .attr('fill', 'red');
 

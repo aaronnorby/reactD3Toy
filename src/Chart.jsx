@@ -3,14 +3,16 @@ var d3 = require('d3');
 
 
 var MyCircle = React.createClass({
+  
+
   render: function() {
+    
     var circleMaker = function(i) {
-      console.log("i: ", i);
       return {x: i*20 + 20, y: i*20 + 20};
     };
 
     return (
-        <circle cx={circleMaker(this.props.key).x} cy={circleMaker(this.props.key).y}
+        <circle cx={circleMaker(this.props.index).x} cy={circleMaker(this.props.index).y}
           r="9" style={{"fill": "red"}}>
         </circle>
     );
@@ -30,11 +32,12 @@ var Chart = React.createClass({
   },
 
   drawCircles: function() {
+
     var circles = this.state.data.map(function(datum, idx) {
-      return (<MyCircle datum={datum} key={idx} />);
+      return (<MyCircle datum={datum} index={idx} key={idx} />);
     });
 
-    return (<g>{circles}</g>);
+    return circles;
   },
 
 
